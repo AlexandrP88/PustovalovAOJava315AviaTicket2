@@ -34,7 +34,7 @@ class RouteManagerTest {
         Route[] expected = {ticket7, ticket2, ticket1, ticket3, ticket5, ticket6, ticket4};
         Route[] actual = repo.findAll();
 
-        Arrays.sort(actual);
+        //Arrays.sort(actual);
 
         assertArrayEquals(expected, actual);
 
