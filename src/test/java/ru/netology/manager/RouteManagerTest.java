@@ -34,8 +34,6 @@ class RouteManagerTest {
         Route[] expected = {ticket7, ticket2, ticket1, ticket3, ticket5, ticket6, ticket4};
         Route[] actual = repo.findAll();
 
-        //Arrays.sort(actual);
-
         assertArrayEquals(expected, actual);
 
     }
@@ -57,8 +55,6 @@ class RouteManagerTest {
         Route[] expected = {ticket2, ticket1, ticket3,};
         Route[] actual = manager.searchTicket("DME", "LED");
 
-        Arrays.sort(actual);
-
         assertArrayEquals(expected, actual);
 
     }
@@ -79,8 +75,6 @@ class RouteManagerTest {
 
         Route[] expected = {};
         Route[] actual = manager.searchTicket("LED", "DME");
-
-        Arrays.sort(actual);
 
         assertArrayEquals(expected, actual);
 

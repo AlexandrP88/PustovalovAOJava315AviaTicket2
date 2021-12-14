@@ -3,6 +3,8 @@ package ru.netology.repository;
 import ru.netology.domain.Route;
 import ru.netology.manager.RouteManager;
 
+import java.util.Arrays;
+
 public class RouteRepository {
     private Route[] route = new Route[0];
 
@@ -13,10 +15,12 @@ public class RouteRepository {
         int lastIndex = tmp.length - 1;
         tmp[lastIndex] = ticket;
         route = tmp;
+        Arrays.sort(route);
     }
 
     public Route[] findAll() {
+        Arrays.sort(route);
         return route;
     }
 
-    }
+}
